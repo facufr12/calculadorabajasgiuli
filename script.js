@@ -23,6 +23,8 @@ function calculateResult() {
         if (pathology === "celiaquia") {
             if (consumption === "no" && capitas > 2 && ageRange === "under65") {
                 result = "GC";
+            } else if (consumption === "no" && capitas >= 1 && ageRange === "over65") { // Nueva condición
+                result = "GC";
             } else if (consumption === "yes" && capitas >= 1) {
                 result = "CHEQUEAR CON FIDELIZACION"; // Nueva condición
             }
