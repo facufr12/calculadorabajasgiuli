@@ -7,7 +7,7 @@ function calculateResult() {
     let result = "";
 
     // Patologías con GM
-    if (["diabetes", "oncológicas", "trasplantados", "artritis", "hiv", "cardiacas"].includes(pathology)) {
+    if (["diabetes", "oncológicas", "trasplantados", "artritis", "hiv"].includes(pathology)) {
         result = "GM";
     } else if (pathology === "obesidad" && consumption === "yes") {
         result = "GM";
@@ -23,14 +23,14 @@ function calculateResult() {
         if (pathology === "celiaquia") {
             if (consumption === "no" && capitas > 2 && ageRange === "under65") {
                 result = "GC";
-            } else if (consumption === "no" && capitas >= 1 && ageRange === "over65") { // Nueva condición
+            } else if (consumption === "no" && capitas >= 1 && ageRange === "over65") { 
                 result = "GC";
             } else if (consumption === "yes" && capitas >= 1) {
-                result = "CHEQUEAR CON FIDELIZACION"; // Nueva condición
+                result = "CHEQUEAR CON FIDELIZACION"; 
             }
         } else if (pathology === "epilepsia") {
             if (consumption === "no" && capitas >= 1) {
-                result = "GC"; // Nueva condición para epilepsia
+                result = "GC"; 
             } else if (consumption === "yes") {
                 result = "GM";
             }
@@ -41,16 +41,20 @@ function calculateResult() {
                 result = "GM";
             }
         } else if (pathology === "psiquiátricos" && consumption === "no" && capitas === 1 && ageRange === "under65") {
-            result = "GC"; // Nueva condición
+            result = "GC"; 
         } else if (pathology === "judicializados") {
             if (consumption === "no" && capitas >= 1) {
-                result = "GM"; // Nueva condición
+                result = "GM"; 
             } else {
-                result = "GM"; // Judicializados tienen siempre GM
+                result = "GM"; 
             }
         }
-    } else if (pathology === "cardiacas" && consumption === "no" && capitas > 2 && ageRange === "under65") {
-        result = "GC";
+    } else if (pathology === "cardiacas") {
+        if (consumption === "no" && capitas > 2 && ageRange === "under65") {
+            result = "GC"; // Nueva condición para enfermedad cardiaca
+        } else {
+            result = "GM"; // En otras condiciones, enfermedad cardiaca es GM
+        }
     } else {
         result = "GC";
     }
