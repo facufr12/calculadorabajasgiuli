@@ -1,114 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Stackfindover: Sign in</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Scoring</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="login-root">
-    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
-      <div class="loginbackground box-background--white padding-top--64">
-        <div class="loginbackground-gridContainer">
-          <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
-            <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+    <div class="container">
+        <h1>Calculadora de Scoring</h1>
+        <form id="scoringForm">
+            <label for="pathology">Patología</label>
+            <select id="pathology">
+                <option value="celiaquia">Celiaquía</option>
+                <option value="diabetes">Diabetes tipo 1</option>
+                <option value="epilepsia">Epilepsia</option>
+                <option value="obesidad">Obesidad</option>
+                <option value="osteoporosis">Osteoporosis</option>
+                <option value="cud">CUD</option>
+                <option value="oncológicas">Enfermedades Oncológicas</option>
+                <option value="trasplantados">Trasplantados</option>
+                <option value="artritis">Artritis Rematoidea</option>
+                <option value="neurológicos">Estudios neurológicos en pediátricos</option>
+                <option value="psiquiátricos">Pacientes psiquiátricos</option>
+                <option value="hiv">HIV</option>
+                <option value="judicializados">Judicializados</option>
+                <option value="cardiacas">Enfermedades Cardiacas</option>
+                <option value="sin_patología">Sin Patología</option>
+            </select>
+            
+            <div class="radio-group">
+                <label for="consumption">Último año</label>
+                <input type="radio" id="consumption_yes" name="consumption" value="yes"> Con consumo
+                <input type="radio" id="consumption_no" name="consumption" value="no"> Sin consumo
             </div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
-            <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
-            <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
-            <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
-            <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
-            <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
-            <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
-            <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
-            <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
-          </div>
-        </div>
-      </div>
-      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
-        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1><a>Grupo Cober</a></h1>
-        </div>
-        <div class="formbg-outer">
-            <div class="formbg">
-                <div class="formbg-inner padding-horizontal--48">
-                  <form id="scoringForm">
-                    <div class="field padding-bottom--24">
-                      <label for="pathology">Patología</label>
-                      <select id="pathology" name="pathology">
-                        <option value="celiaquia">Celiaquía</option>
-                        <option value="diabetes">Diabetes tipo 1</option>
-                        <option value="epilepsia">Epilepsia</option>
-                        <option value="obesidad">Obesidad</option>
-                        <option value="osteoporosis">Osteoporosis</option>
-                        <option value="cud">CUD</option>
-                        <option value="oncológicas">Enfermedades Oncológicas</option>
-                        <option value="trasplantados">Trasplantados</option>
-                        <option value="artritis">Artritis Rematoidea</option>
-                        <option value="neurológicos">Estudios neurológicos en pediátricos</option>
-                        <option value="psiquiátricos">Pacientes psiquiátricos</option>
-                        <option value="hiv">HIV</option>
-                        <option value="judicializados">Judicializados</option>
-                        <option value="cardiacas">Enfermedades Cardiacas</option>
-                        <option value="sin_patología">Sin Patología</option>
-                      </select>
-                    </div>
-                    <div class="field padding-bottom--24">
-                      <div class="grid--50-50">
-                        <label for="consumption">Último año</label>
-                      </div>
-                      <div class="radio-group">
-                        <input type="radio" id="consumption_yes" name="consumption" value="yes"> Con consumo
-                        <input type="radio" id="consumption_no" name="consumption" value="no"> Sin consumo
-                      </div>
-                    </div>
-                    <div class="field padding-bottom--24">
-                      <label for="capitas">Cápitas</label>
-                      <input type="number" id="capitas" name="capitas" min="1" required>
-                    </div>
-                    <div class="field padding-bottom--24">
-                      <div class="grid--50-50">
-                        <label for="ageRange">Rango Etario</label>
-                      </div>
-                      <div class="age-group">
-                        <input type="radio" id="age_under" name="ageRange" value="under65"> Menores de 65
-                        <input type="radio" id="age_over" name="ageRange" value="over65"> Mayores de 65
-                      </div>
-                    </div>
-                    <div class="field padding-bottom--24">
-                        <button type="button" onclick="calculateResult()">Calcular</button>
-                      </div>
-                  </form>
-                  <!-- Div para mostrar el resultado -->
-                  <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
-                </div>
-              </div>
-          <div class="footer-link padding-top--24">
-            <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
-              <span><a >©Grupocober</a></span>
-             
-              <span><a>Todos los Derechos Reservados.</a></span>
+            <div>
+            <label for="capitas">Cápitas</label>
+            <input type="number" id="capitas" name="capitas" min="1" required>
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="age-group">
+            <label for="ageRange">Rango Etario</label>
+            <input type="radio" id="age_under" name="ageRange" value="under65"> Menores de 65
+            <input type="radio" id="age_over" name="ageRange" value="over65"> Mayores de 65
+            </div>
+            <button type="button" onclick="calculateResult()">Calcular</button>
+        </form>
+
+        <div id="result"></div>
     </div>
-  </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="/script.js" ></script>
 </html>
