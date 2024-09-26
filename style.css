@@ -1,81 +1,4 @@
 body {
-<<<<<<< HEAD
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-.container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  text-align: center;
-}
-label{
-  font-weight: 700;
-  
-  
-}
-
-select, input {
-  display: block;
-  width: 95%;
-  margin-bottom: 10px;
-  padding: 10px;
-  
-}
-
-select, button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.radio-group, .age-group {
-  display: flex;
-  justify-content:space-around;
-  
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.radio-group label, .age-group label {
-  width: auto;
-  margin-right: 10px;
-}
-input[type="radio"] {
-  width: 25px;
-  margin-right: 10px;
-}
-
-#result {
-  margin-top: 20px;
-  font-size: 1.2em;
-  text-align: center;
-}
-div{
-  margin-top: 5%;
-  margin-bottom: 5%;
-  
-=======
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
@@ -151,5 +74,4 @@ div{
     margin-top: 5%;
     margin-bottom: 5%;
     
->>>>>>> ece0796 (cambiosgiuliana)
 }
