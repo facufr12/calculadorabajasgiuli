@@ -41,7 +41,9 @@ function calculateResult() {
 
     // Condiciones para enfermedades cardíacas
     else if (pathology === "cardiacas") {
-        if (consumption === "no" && capitas >= 1 && ageRange === "under65") {
+        if (consumption === "no" && capitas === 1 && ageRange === "under65") {
+            result = "GC";
+        } else if (consumption === "no" && capitas >= 1 && ageRange === "under65") {
             result = "GC";
         } else if (consumption === "no" && capitas >= 2 && ageRange === "over65") {
             result = "GC";
