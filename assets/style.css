@@ -8,28 +8,29 @@ body {
   margin: 50px auto;
   padding: 20px;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
 }
-label{
+label {
   font-weight: 700;
-  
-  
 }
 
-select, input {
+select,
+input {
   display: block;
   width: 95%;
+
+  margin-top: 7px;
   margin-bottom: 10px;
   padding: 10px;
-  
 }
 
-select, button {
+select,
+button {
   display: block;
   width: 100%;
   margin-bottom: 10px;
@@ -37,7 +38,7 @@ select, button {
 }
 
 button {
-  background-color: #007BFF;
+  background-color: gray;
   color: white;
   border: none;
   cursor: pointer;
@@ -45,18 +46,20 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: gray;
 }
 
-.radio-group, .age-group {
+.radio-group,
+.age-group {
   display: flex;
-  justify-content:space-around;
-  
+  justify-content: space-around;
+
   margin-bottom: 10px;
   width: 100%;
 }
 
-.radio-group label, .age-group label {
+.radio-group label,
+.age-group label {
   width: auto;
   margin-right: 10px;
 }
@@ -70,8 +73,13 @@ input[type="radio"] {
   font-size: 1.2em;
   text-align: center;
 }
-div{
+div {
   margin-top: 5%;
   margin-bottom: 5%;
-  
+}
+img {
+  width: 40%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Para que se trate como un bloque */
+  margin: 0 auto; /* Centra la imagen */
 }
